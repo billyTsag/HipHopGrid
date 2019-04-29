@@ -5,8 +5,9 @@
 
 body{
 	background:black;
-	margin-top:3px;
+	margin-top:2vh;
 	font-family:serif;
+	
 }
 
 #grid{
@@ -17,18 +18,37 @@ body{
 	width:90vw;
 	margin:0 auto;	
 	color:white;
+	align-items: center;
+}
+
+.animate{
+	transition: transform .33s; 	
+	transform-style: preserve-3d; 
+	height:100%;
+}
+
+
+
+.still{
+	transform: translateZ(100px);
+	height:100%;
+}
+
+.flip{
+	transform: rotateX(-90deg) translateZ(-100px);
+	height:100%;
+}
+
+.animate:hover{
+	transform: rotateX(90deg);
 }
 
 img{
 	width:100%;
 	height:100%;
-	box-sizing: border-box;	
+	box-sizing: border-box;		
 }
 
-img:hover{
-	border:4px solid orange;
-	border-radius:9px;
-}
 
 .first-text{
 	grid-column:3/5;
